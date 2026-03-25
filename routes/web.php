@@ -21,5 +21,8 @@ Route::get('/', function () {
 
 Route::get('/second', [TestController::class, 'show']);
 
-Route::get('/', [MainController::class, 'showIndex'])->name('home');
+Route::get('/home', [MainController::class, 'showIndex'])->name('home');
 Route::get('/array', [MainController::class, 'showArray'])->name('array');
+Route::get('/shuffle', [MainController::class, 'shuffleArray'])->name('shuffle');
+Route::get('/sort',    [MainController::class, 'sortArray'])->name('sort');
+Route::get('/filter',  [MainController::class, 'filterArray'])->name('filter');
